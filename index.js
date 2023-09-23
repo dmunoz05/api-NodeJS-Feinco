@@ -32,5 +32,5 @@ app.listen(PORT, () => {
 
 // Rutas del app
 app.get('/wpxfeinco/', async (req, res) => {
-    console.log('Prueba backend Feinco');
+    res.json({message: 'Prueba backend Feinco'})
 });
