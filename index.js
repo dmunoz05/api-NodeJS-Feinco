@@ -41,12 +41,6 @@ app.listen(PORT, () => {
   console.log('Running server on port', PORT)
 });
 
-
-// Rutas del app
-app.get('/wpxfeinco/', async (req, res) => {
-  res.json({ message: 'Prueba backend Feinco' })
-});
-
 // Rutas del app
 app.get('/wpxfeinco/types_credit/', (req, res) => {
   const sql = 'SELECT * FROM u224736136_yHrbs.wp_type_credit_dates;';
