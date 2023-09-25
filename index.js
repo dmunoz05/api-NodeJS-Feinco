@@ -2,6 +2,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
 const mysql2 = require('mysql2');
+const CryptoJS = require("crypto-js");
 dotenv.config();
 
 /* Database */
