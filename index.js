@@ -59,7 +59,7 @@ app.get('/wpxfeinco/types_credit/', (req, res) => {
       JSON.stringify(result),
       'X4mg=7xuQtr?HsK0mfZ1PvDoXemduEBMVTfI3FddvjuyK9iDBPnydVomZc5oe!VAAMvY!MwQn4jXoI5Qdmx4P7H6PKoaWXBbjgxrKA!gh!260kNlF!4enly5UPhn/QXT'
     );
-    return res.json(Data);
+    return res.json(Data.toString());
   });
 });
 
