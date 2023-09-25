@@ -9,7 +9,7 @@ const config = {
   host: "185.239.210.1",
   port: "3306",
   user: "u224736136_RfpIO",
-  password: "|bn/+ilB@8",
+  password: "1liaIcQJ7G",
   database: "u224736136_yHrbs",
 };
 
