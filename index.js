@@ -7,11 +7,11 @@ dotenv.config();
 
 /* Database */
 const config = {
-  host: "185.239.210.1",
-  port: "3306",
-  user: "u224736136_RfpIO",
-  password: "1liaIcQJ7G",
-  database: "u224736136_yHrbs",
+  host: process.env.MYSQL_HOST,
+  port: process.env.MYSQL_PORT,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE,
 };
 
 const pool = mysql2.createPool(config);
@@ -27,10 +27,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 const corsOptions = {
-  // origin: "https://plataformain.com", 
-  origin: "*",
+  origin: "https://feinco.com.co", 
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, // Habilita el intercambio de cookies y encabezados de autorización
+  credentials: true, 
   optionsSuccessStatus: 204,
 };
 
