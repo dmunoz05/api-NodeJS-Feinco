@@ -14,9 +14,10 @@ const config = {
   database: process.env.MYSQL_DATABASE,
 };
 
+// Crear la conexión a la base de datos
 const pool = mysql2.createPool(config);
 
-
+// Puerto
 const PORT = 3000;
 
 // SERVIDOR
