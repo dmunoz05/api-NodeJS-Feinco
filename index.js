@@ -27,9 +27,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
 const corsOptions = {
-  origin: "https://feinco.com.co", 
+  origin: "https://feinco.com.co",
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true, 
+  credentials: true,
   optionsSuccessStatus: 204,
 };
 
@@ -43,7 +43,7 @@ app.listen(PORT, () => {
 
 // Rutas del app
 app.get('/wpxfeinco/types_credit/', (req, res) => {
-  const sql = 'SELECT * FROM u224736136_yHrbs.wp_type_credit_dates;';
+  const sql = `SELECT * FROM ${config.database}.wp_type_credit_dates;`;
   pool.query(sql, (err, result) => {
     if (err) {
       return res.status(500).json({ message: "Error en la consulta", error: err });
@@ -56,9 +56,9 @@ app.get('/wpxfeinco/types_credit/', (req, res) => {
   });
 });
 
-
+// Reporte de usuarios
 app.get('/wpxfeinco/users_report/', (req, res) => {
-  const sql = 'SELECT * FROM u224736136_yHrbs.wp_users_excel_credit;';
+  const sql = `SELECT * FROM ${config.database}.wp_users_excel_credit;`;
   pool.query(sql, (err, result) => {
     if (err) {
       return res.status(500).json({ message: "Error en la consulta", error: err });
